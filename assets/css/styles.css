@@ -938,3 +938,21 @@ img,svg{
     justify-self: flex-start;
   }
 }
+/* Ensure proper responsiveness for small devices */
+@media screen and (max-width: 576px) {
+  .about__container {
+    grid-template-columns: 1fr; /* Single-column layout for small screens */
+    padding: 1rem; /* Add padding for proper spacing */
+  }
+
+  .about__data,
+  .about__description {
+    text-align: center; /* Center-align content for small screens */
+    padding-inline: 1rem; /* Add horizontal padding to prevent cutting off */
+  }
+
+  .about__blob {
+    max-width: 100%; /* Ensure blob image fits within the container */
+    width: auto;
+  }
+}
